@@ -1,5 +1,6 @@
 import { ChatTeardropDots } from 'phosphor-react';
 import { Popover } from '@headlessui/react';
+import { WidgetForm } from './WidgetForm';
 
 
 /**
@@ -29,9 +30,11 @@ export function Widget() {
 
     // no tawind o uma unidade de tamanho é 1/4 de um REM o seja 1 = 4px.
     return (
-        <Popover className='absolute bottom-5 right-5'>
+        <Popover className='absolute bottom-4 right-4 md:bottom-8 md:right-8 flex flex-col items-end text-zinc-100'>
 
-            <Popover.Panel>Hello word</Popover.Panel>
+            <Popover.Panel>
+                <WidgetForm/>
+            </Popover.Panel>
 
 
            <Popover.Button className='bg-brand-500 rounded-full px-3 h-12 text-white flex items-center group'>
